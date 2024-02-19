@@ -11,6 +11,11 @@ app.get('/', (req, res, next) => {
     `)
 })
 
+app.get('/api/v1/:token', (req, res, next) => {
+    console.log(req.params.token)
+    res.status(200).json({param: req.params.token})
+})
+
 app.get('/api/v1/instagram', (req, res, next) => {
     const instaSocial = {
         username: 'Waynes',
